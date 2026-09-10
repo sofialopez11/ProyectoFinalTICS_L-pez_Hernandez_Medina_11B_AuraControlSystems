@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria SafeRide | Consultoría Automatizada IRTRA Petapa</title>
+    <meta name="description" content="Página web oficial del proyecto Aetheria SafeRide para el IRTRA Petapa. Solución de automatización y seguridad perimetral alineada con los ODS 3 y 9.">
+    
+    <!-- Tipografía Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ========================================================
+           VARIABLES DE ESTILO - PALETA GIRLIE & PROFESSIONAL AESTHETIC
+           ======================================================== */
+        :root {
+            --bg-principal: #FAF7F8;
+            --tarjetas-bg: #FFFFFF;
+            --rosa-pastel: #F8E8EE;
+            --rosa-vibrante: #E8A0BF;
+            --malva-profundo: #C082A2;
+            --texto-oscuro: #2D272A;
+            --texto-suave: #6B5B65;
+            --acento-dorado: #D4AF37;
+            --azul-ejecutivo: #1B365D;
+            --sombra-suave: 0 10px 30px rgba(192, 130, 162, 0.12);
+            --borde-radio: 20px;
+            --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* RESETEO BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-principal);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVEGACIÓN */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(232, 160, 191, 0.2);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--malva-profundo);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--rosa-vibrante);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transicion);
+        }
+
+        .nav-links a:hover {
+            color: var(--malva-profundo);
+        }
+
+        /* SECCIÓN HERO */
+        .hero {
+            padding: 160px 8% 100px 8%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+            background: linear-gradient(135deg, #FAF7F8 0%, #F8E8EE 100%);
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(232, 160, 191, 0.2);
+            color: var(--malva-profundo);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid var(--rosa-vibrante);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: var(--texto-oscuro);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--malva-profundo);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--texto-suave);
+            margin-bottom: 30px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transicion);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--malva-profundo);
+            color: white;
+            box-shadow: 0 8px 20px rgba(192, 130, 162, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #ab6e90;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--texto-oscuro);
+            border: 1px solid rgba(107, 91, 101, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: var(--rosa-pastel);
+        }
+
+        .hero-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--borde-radio);
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(232, 160, 191, 0.3);
+            text-align: center;
+        }
+
+        .hero-card i {
+            font-size: 3rem;
+            color: var(--rosa-vibrante);
+            margin-bottom: 15px;
+        }
+
+        /* SECCIONES COMUNES */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--texto-oscuro);
+        }
+
+        .section-title p {
+            color: var(--texto-suave);
+            margin-top: 10px;
+        }
+
+        /* ODS GRID */
+        .ods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .ods-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--borde-radio);
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicion);
+            border-top: 4px solid var(--rosa-vibrante);
+        }
+
+        .ods-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ods-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--malva-profundo);
+            opacity: 0.3;
+        }
+
+        /* CIRCUITO & HARDWARE */
+        .circuit-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: white;
+            padding: 40px;
+            border-radius: var(--borde-radio);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .circuit-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .circuit-status span {
+            width: 8px;
+            height: 8px;
+            background: #2E7D32;
+            border-radius: 50%;
+        }
+
+        /* EQUIPO & AVATARES */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--borde-radio);
+            text-align: center;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicion);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .avatar-box {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            background: var(--rosa-pastel);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--malva-profundo);
+            border: 3px solid var(--rosa-vibrante);
+        }
+
+        /* REPRODUCTOR PODCAST & INFOGRAFÍA */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .media-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--borde-radio);
+            box-shadow: var(--sombra-suave);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #231E21;
+            color: white;
+            text-align: center;
+            padding: 40px 8%;
+            margin-top: 50px;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 900px) {
+            .hero, .circuit-container, .media-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2.4rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Aetheria
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ods">Impacto ODS</a></li>
+            <li><a href="#circuito">Circuito</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div>
+            <span class="tag"><i class="fa-solid fa-sparkles"></i> Consultoría Electromecánica</span>
+            <h1>Aetheria <span>SafeRide</span></h1>
+            <p>Sistema automatizado de seguridad perimetral y gestión operacional inteligente diseñado para optimizar la experiencia y protección en el parque de atracciones <strong>IRTRA Petapa</strong>.</p>
+            <div class="btn-group">
+                <a href="https://github.com" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> Repositorio GitHub</a>
+                <a href="#recursos" class="btn btn-secondary"><i class="fa-solid fa-podcast"></i> Escuchar Podcast</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Seguridad y Sostenibilidad</h3>
+            <p style="margin-top: 10px; font-size: 0.95rem; color: var(--texto-suave);">Automatización con Arduino Uno R3, sensores infrarrojos, ultrasónicos y control de energía eficiente.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ODS -->
+    <section id="ods">
+        <div class="section-title">
+            <h2>Alineación Estratégica ODS</h2>
+            <p>Impactando metas globales de desarrollo sostenible desde Guatemala</p>
+        </div>
+        <div class="ods-grid">
+            <div class="ods-card">
+                <div class="ods-number">03</div>
+                <h3>ODS 3: Salud y Bienestar</h3>
+                <p style="margin-top: 15px; color: var(--texto-suave);">Prevención activa de accidentes laborales y seguridad integral del visitante mediante barreras de detección infrarroja y ultrasónica.</p>
+            </div>
+            <div class="ods-card">
+                <div class="ods-number">09</div>
+                <h3>ODS 9: Industria e Innovación</h3>
+                <p style="margin-top: 15px; color: var(--texto-suave);">Modernización de atracciones electromecánicas mediante infraestructura cibernética de bajo costo y alta precisión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CIRCUITO TINKERCAD -->
+    <section id="circuito">
+        <div class="section-title">
+            <h2>Prototipo & Simulación Tinkercad</h2>
+            <p>Ingeniería de control programada exclusivamente en C++</p>
+        </div>
+        <div class="circuit-container">
+            <div>
+                <div class="circuit-status">
+                    <span></span> Estado del Sistema: 100% Funcional
+                </div>
+                <h3>Arquitectura del Circuito</h3>
+                <ul style="margin-top: 15px; padding-left: 20px; color: var(--texto-suave);">
+                    <li>Microcontrolador Arduino Uno R3 en Protoboard.</li>
+                    <li>Sensor Ultrasónico HC-SR04 & Sensor Infrarrojo PIR.</li>
+                    <li>Fotorresistencia LDR para gestión lumínica nocturna.</li>
+                    <li>LED RGB e Indicador Audible Buzzer Piezoeléctrico.</li>
+                    <li>Botonera manual de override para el operador.</li>
+                </ul>
+            </div>
+            <div style="background: var(--rosa-pastel); height: 250px; border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed var(--rosa-vibrante);">
+                <i class="fa-solid fa-microchip" style="font-size: 3rem; color: var(--malva-profundo); margin-bottom: 10px;"></i>
+                <p style="font-size: 0.9rem; color: var(--texto-suave);">Captura del Circuito Tinkercad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EQUIPO -->
+    <section id="equipo">
+        <div class="section-title">
+            <h2>Firma Consultora de Ingeniería</h2>
+            <p>Estudiantes de Undécimo Grado — Colegio Capouilliez</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar-box"><i class="fa-solid fa-user-astronaut"></i></div>
+                <h3>Integrante 1</h3>
+                <p style="color: var(--malva-profundo); font-size: 0.9rem; font-weight: 600;">Ingeniería de Hardware</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar-box"><i class="fa-solid fa-user-ninja"></i></div>
+                <h3>Integrante 2</h3>
+                <p style="color: var(--malva-profundo); font-size: 0.9rem; font-weight: 600;">Desarrollo de Software C++</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar-box"><i class="fa-solid fa-user-sparkles"></i></div>
+                <h3>Integrante 3</h3>
+                <p style="color: var(--malva-profundo); font-size: 0.9rem; font-weight: 600;">Documentación & Web</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN RECURSOS & PODCAST -->
+    <section id="recursos">
+        <div class="section-title">
+            <h2>Recursos del Proyecto</h2>
+            <p>Infografía ejecutiva y podcast informativo del prototipo</p>
+        </div>
+        <div class="media-grid">
+            <div class="media-card">
+                <h3><i class="fa-solid fa-podcast" style="color: var(--rosa-vibrante);"></i> Podcast Informativo</h3>
+                <p style="margin: 15px 0; color: var(--texto-suave);">Escucha la explicación detallada de la lógica del circuito y su impacto en el IRTRA Petapa (Duración máxima 5 min).</p>
+                <a href="https://youtube.com" target="_blank" class="btn btn-secondary" style="width: 100%; justify-content: center;"><i class="fa-brands fa-youtube"></i> Escuchar Podcast en YouTube</a>
+            </div>
+            <div class="media-card">
+                <h3><i class="fa-solid fa-file-pdf" style="color: var(--rosa-vibrante);"></i> Documentación Formal</h3>
+                <p style="margin: 15px 0; color: var(--texto-suave);">Accede al informe técnico formal de investigación en PDF y los recursos del repositorio.</p>
+                <a href="https://github.com" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="fa-solid fa-download"></i> Ver Informe en GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Aetheria SafeRide | Colegio Capouilliez — Tecnología Aplicada Undécimo</p>
+        <p style="margin-top: 5px;">Diseñado para la Administración del Parque IRTRA Petapa</p>
+    </footer>
+
+    <!-- INTERACTIVIDAD CON JAVASCRIPT -->
+    <script>
+        // Desplazamiento suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
